@@ -1,0 +1,1 @@
+{"id":"1b7989a2-e674-4f38-9669-6284939f7317","ts":"2026-05-16T16:15:41.646Z","path":"C:\\Users\\sarka\\Bobthebuilder\\.gitignore","version":"1.0.0","taskID":"d112dbbb-85ab-4a5f-97ef-0eb7b0dbc6d6"}
