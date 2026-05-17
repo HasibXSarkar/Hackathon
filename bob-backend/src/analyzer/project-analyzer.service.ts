@@ -35,10 +35,12 @@ export class ProjectAnalyzerService {
 
   async analyzeProject(projectPath: string): Promise<string> {
     try {
-      this.logger.log(`Analyzing project at: ${projectPath}`);
+      // Remove quotes and normalize path
+      const cleanPath = projectPath.replace(/^["']|["']$/g, '').trim();
+      this.logger.log(`Analyzing project at: ${cleanPath}`);
       
-      const structure = await this.scanDirectory(projectPath);
-      const context = this.buildProjectContext(structure, projectPath);
+      const structure = await this.scanDirectory(cleanPath);
+      const context = this.buildProjectContext(structure, cleanPath);
       
       this.logger.log(`Project analysis complete. Found ${structure.files.length} files`);
       return context;
